@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<p>There are {{ count }} words in your text!</p>
+	<a href="{% url 'homePage' %}" title="">To the main page!</a>
+	<h1>Full text:</h1>
+	{{ fullText }}
+
+
+	<h1>WordCount</h1>
+	{% for word, counttotal in sortedDict %}
+
+		{{word}} - {{counttotal}}
+		<br>
+
+	{% endfor %}
+</body>
+</html>
